@@ -1,0 +1,1769 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JaySan Digital Skill Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#052B71",
+              secondary: "#EEA40C",
+              accent: "#e6eaf0",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              display: ["League Spartan", "sans-serif"],
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              fadeInLeft: {
+                "0%": { opacity: "0", transform: "translateX(-30px)" },
+                "100%": { opacity: "1", transform: "translateX(0)" },
+              },
+              fadeInRight: {
+                "0%": { opacity: "0", transform: "translateX(30px)" },
+                "100%": { opacity: "1", transform: "translateX(0)" },
+              },
+              zoomIn: {
+                "0%": { opacity: "0", transform: "scale(0.95)" },
+                "100%": { opacity: "1", transform: "scale(1)" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "none" },
+                "50%": { boxShadow: "none" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+            animation: {
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+              "fade-in-left": "fadeInLeft 0.8s ease-out forwards",
+              "fade-in-right": "fadeInRight 0.8s ease-out forwards",
+              "zoom-in": "zoomIn 1s ease-out forwards",
+              "pulse-glow": "pulseGlow 2s infinite",
+              float: "float 4s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .font-display {
+        font-family: "League Spartan", sans-serif;
+      }
+
+      p {
+        font-size: 1.125rem !important;
+      }
+
+      .underline-custom {
+        text-decoration: underline;
+        text-decoration-color: #eea40c;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 8px;
+      }
+
+      .text-gradient-animate {
+        background: linear-gradient(270deg, #eea40c, #f5d101, #eea40c);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textGradient 3s ease infinite;
+      }
+
+      @keyframes textGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .typing-effect {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(41, end);
+        width: 34ch;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 34ch;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: currentColor;
+        }
+      }
+
+      @keyframes live-pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+        }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+      }
+
+      .animate-live-pulse {
+        animation: live-pulse 2s infinite;
+      }
+
+      .hero-border {
+        border-radius: 40px;
+      }
+
+      .module-box {
+        background-color: #0a2e6f;
+        border-radius: 30px;
+      }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-white min-h-screen flex flex-col font-sans text-gray-800 overflow-x-hidden w-full"
+  >
+    <!-- Top Bar -->
+    <div
+      class="bg-primary text-white text-xs md:text-sm py-2 px-6 hidden md:flex flex-col md:flex-row justify-between items-center"
+    >
+      <div class="font-medium">Live in Odia · 200+ Students Trained</div>
+      <div
+        class="flex flex-col md:flex-row gap-4 md:gap-8 items-center mt-2 md:mt-0 font-medium"
+      >
+        <span>GSTN - 21CAADPP6504R1ZF</span>
+        <div class="flex items-center gap-2">
+          <span class="bg-secondary text-primary rounded px-1.5 py-0.5"
+            ><i class="fas fa-phone-alt text-[10px]"></i
+          ></span>
+          <span>+91-9178405636</span>
+        </div>
+        <div class="flex gap-2">
+          <a
+            href="contact.html"
+            class="bg-gray-400 hover:bg-gray-300 text-primary w-6 h-6 rounded flex items-center justify-center"
+            ><i class="fab fa-linkedin-in text-[12px]"></i
+          ></a>
+          <a
+            href="contact.html"
+            class="bg-gray-400 hover:bg-gray-300 text-primary w-6 h-6 rounded flex items-center justify-center"
+            ><i class="fa-brands fa-x-twitter text-[12px]"></i
+          ></a>
+          <a
+            href="contact.html"
+            class="bg-blue-600 hover:bg-blue-500 text-white w-6 h-6 rounded flex items-center justify-center"
+            ><i class="fab fa-facebook-f text-[12px]"></i
+          ></a>
+          <a
+            href="contact.html"
+            class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white w-6 h-6 rounded flex items-center justify-center"
+            ><i class="fab fa-instagram text-[12px]"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+      class="bg-[#f5f5f5] py-3 px-6 md:px-10 flex justify-between items-center sticky top-0 z-50"
+    >
+      <div class="flex items-center">
+        <img
+          src="logo.png"
+          alt="JaySan Digital Skill Academy"
+          class="h-12 md:h-16 object-contain"
+        />
+      </div>
+      <div class="hidden lg:flex gap-10 text-primary font-bold text-lg">
+        <a href="index.html" class="text-secondary">Home</a>
+        <a href="about.html" class="hover:text-secondary transition-colors"
+          >About us</a
+        >
+        <a href="courses.html" class="hover:text-secondary transition-colors"
+          >Courses</a
+        >
+        <a href="community.html" class="hover:text-secondary transition-colors"
+          >Community</a
+        >
+        <a href="blog.html" class="hover:text-secondary transition-colors"
+          >Blog</a
+        >
+        <a href="contact.html" class="hover:text-secondary transition-colors"
+          >Contact us</a
+        >
+      </div>
+      <div class="hidden lg:block">
+        <button
+          onclick="window.location.href = 'contact.html'"
+          class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+        >
+          <i class="fas fa-users"></i> Join FREE Webinar
+        </button>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobileMenuBtn"
+        class="lg:hidden text-primary text-2xl focus:outline-none"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-primary/95 backdrop-blur-md z-[100] hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300"
+    >
+      <button
+        id="closeMobileMenuBtn"
+        class="absolute top-6 right-3 text-white text-3xl focus:outline-none"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <div
+        class="flex flex-col items-center gap-6 text-white font-bold text-xl"
+      >
+        <a href="index.html" class="text-secondary">Home</a>
+        <a href="about.html" class="hover:text-secondary transition-colors"
+          >About us</a
+        >
+        <a href="courses.html" class="hover:text-secondary transition-colors"
+          >Courses</a
+        >
+        <a href="community.html" class="hover:text-secondary transition-colors"
+          >Community</a
+        >
+        <a href="blog.html" class="hover:text-secondary transition-colors"
+          >Blog</a
+        >
+        <a href="contact.html" class="hover:text-secondary transition-colors"
+          >Contact us</a
+        >
+        <button
+          onclick="
+            closeMobileMenu();
+            openEnrollModal();
+          "
+          class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+        >
+          <i class="fas fa-users"></i> Join FREE Webinar
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Hero Section -->
+    <main class="flex-grow w-full bg-[#f8f9fc] relative overflow-hidden">
+      <!-- Background Elements (optional subtle gradients) -->
+      <div
+        class="absolute inset-0 pointer-events-none bg-gradient-to-r from-white via-transparent to-transparent opacity-50 z-0"
+      ></div>
+
+      <!-- Hero Container -->
+      <div
+        class="w-[calc(100%-2rem)] max-w-[1400px] mx-auto my-4 lg:my-8 relative flex flex-col lg:flex-row items-stretch min-h-[600px] border-[4px] border-[#18181b] rounded-[40px] overflow-hidden bg-[#f5f5f5]"
+        data-aos="fade-up"
+      >
+        <!-- Left Content Area -->
+        <div
+          class="w-full lg:w-[45%] p-8 lg:p-8 lg:py-10 z-10 flex flex-col justify-center items-center lg:items-start text-center lg:text-left"
+        >
+          <!-- Live Badge -->
+          <div
+            class="bg-[#fceccf] text-primary font-bold px-3 md:px-4 py-1.5 rounded-[20px] w-max text-[10px] sm:text-xs md:text-sm mb-6 flex items-center justify-center gap-1.5 md:gap-2 border border-orange-200 whitespace-nowrap mx-auto lg:mx-0"
+          >
+            <span
+              class="bg-red-500 text-white text-[9px] sm:text-[10px] md:text-[11px] font-bold px-2 py-0.5 rounded flex items-center gap-1.5 whitespace-nowrap shrink-0 animate-live-pulse"
+            >
+              <span
+                class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"
+              ></span>
+              LIVE
+            </span>
+            <span class="typing-effect"
+              >Live & recording courses in Odia Language</span
+            >
+          </div>
+
+          <!-- Main Heading -->
+          <h1
+            class="text-5xl lg:text-[56px] font-black text-primary leading-[1.1] mb-4 tracking-tight opacity-0 animate-fade-in-up"
+            style="animation-delay: 0.1s"
+          >
+            Skills
+            <span
+              class="text-[#CF8100] underline decoration-[#CF8100] decoration-4 underline-offset-8"
+              >That</span
+            ><br class="hidden md:block" />
+            <span
+              class="text-[#CF8100] underline decoration-[#CF8100] decoration-4 underline-offset-8"
+              >Pay You Back</span
+            ><br class="hidden md:block" />
+            — Every Day
+          </h1>
+
+          <!-- Subheading / Paragraph -->
+          <p
+            class="text-primary font-semibold text-base mb-6 leading-relaxed max-w-lg pr-4 opacity-0 animate-fade-in-up"
+            style="animation-delay: 0.3s"
+          >
+            Practical AI, Canva and digital marketing skills for working
+            professionals, government employees and homemakers — taught
+            step-by-step in Odia, so you can apply it at your desk from day one.
+          </p>
+
+          <!-- Action Buttons -->
+          <div
+            class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 mb-6 w-full opacity-0 animate-fade-in-up"
+            style="animation-delay: 0.5s"
+          >
+            <button
+              class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+            >
+              Book Free Demo
+            </button>
+            <button
+              class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+            >
+              <i class="fas fa-download"></i> Download Brochure
+            </button>
+          </div>
+
+          <!-- Features Tags -->
+          <div
+            class="flex flex-wrap justify-center lg:justify-start gap-4 opacity-0 animate-fade-in-up w-full"
+            style="animation-delay: 0.7s"
+          >
+            <div
+              class="bg-white text-primary font-bold text-xs px-4 py-2 rounded-xl text-center border border-gray-100 flex items-center justify-center leading-tight whitespace-nowrap shadow-sm"
+            >
+              19 Modules
+            </div>
+            <div
+              class="bg-white text-primary font-bold text-xs px-4 py-2 rounded-xl text-center border border-gray-100 flex items-center justify-center leading-tight whitespace-nowrap shadow-sm"
+            >
+              57 Days
+            </div>
+            <div
+              class="bg-white text-primary font-bold text-xs px-4 py-2 rounded-xl text-center border border-gray-100 flex items-center justify-center leading-tight whitespace-nowrap shadow-sm"
+            >
+              7 Stages
+            </div>
+            <div
+              class="bg-white text-primary font-bold text-xs px-4 py-2 rounded-xl text-center border border-gray-100 flex items-center justify-center leading-tight whitespace-nowrap shadow-sm"
+            >
+              100% Odia Language
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Image Area -->
+        <div
+          class="w-full lg:w-[29%] static lg:relative flex justify-center items-end min-h-[350px] lg:min-h-0 z-0"
+        >
+          <!-- Positioning Wrapper -->
+          <div
+            class="lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:-ml-6 w-[110%] lg:w-[120%] z-0"
+          >
+            <!-- Animation Wrapper -->
+            <div
+              class="w-full opacity-0 animate-fade-in-up"
+              style="animation-delay: 0.4s"
+            >
+              <!-- Image with Hover -->
+              <img
+                src="girlimage.png"
+                alt="Student showing thumbs up"
+                class="object-contain object-bottom w-full max-w-none align-bottom hover:scale-105 transition-transform duration-700 origin-bottom"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Panel Area -->
+        <div
+          class="w-full lg:w-[26%] z-10 p-4 lg:p-6 lg:pl-0 flex flex-col opacity-0 animate-fade-in-right"
+          style="animation-delay: 0.6s"
+        >
+          <div
+            class="module-box text-white h-full flex flex-col justify-between overflow-hidden relative mt-4 lg:mt-0 /50 transition- duration-500"
+          >
+            <!-- Top section with list -->
+            <div class="p-8 flex flex-col flex-grow relative">
+              <div class="mb-8">
+                <h3
+                  class="text-white text-lg font-black uppercase tracking-wider"
+                >
+                  Your Learning Journey
+                </h3>
+              </div>
+
+              <!-- Timeline Container -->
+              <div class="relative flex-grow flex flex-col justify-between">
+                <!-- Vertical dashed line -->
+                <div
+                  class="absolute left-4 top-4 bottom-8 w-0 border-l-[2px] border-dashed border-secondary/60 z-0"
+                ></div>
+
+                <!-- Items -->
+                <ul class="flex flex-col space-y-7 relative z-10 text-sm">
+                  <li class="flex items-start gap-6">
+                    <div
+                      class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary font-black text-sm shrink-0 ring-[4px] ring-[#0A2E6F] outline outline-1 outline-secondary shadow-[0_0_10px_rgba(238,164,12,0.2)]"
+                    >
+                      1
+                    </div>
+                    <div class="pt-1.5">
+                      <div
+                        class="font-bold text-white text-[15px] leading-tight"
+                      >
+                        Digital Foundation
+                      </div>
+                      <div class="text-[#8ca3c7] text-xs mt-1.5 font-medium">
+                        Marketing mindset & branding
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="flex items-start gap-6">
+                    <div
+                      class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary font-black text-sm shrink-0 ring-[4px] ring-[#0A2E6F] outline outline-1 outline-secondary shadow-[0_0_10px_rgba(238,164,12,0.2)]"
+                    >
+                      2
+                    </div>
+                    <div class="pt-1.5">
+                      <div
+                        class="font-bold text-white text-[15px] leading-tight"
+                      >
+                        AI Productivity
+                      </div>
+                      <div class="text-[#8ca3c7] text-xs mt-1.5 font-medium">
+                        ChatGPT, Gemini & Claude
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="flex items-start gap-6">
+                    <div
+                      class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary font-black text-sm shrink-0 ring-[4px] ring-[#0d223f] outline outline-1 outline-secondary shadow-[0_0_10px_rgba(238,164,12,0.2)]"
+                    >
+                      3
+                    </div>
+                    <div class="pt-1.5">
+                      <div
+                        class="font-bold text-white text-[15px] leading-tight"
+                      >
+                        Design & Video
+                      </div>
+                      <div class="text-[#8ca3c7] text-xs mt-1.5 font-medium">
+                        Canva, AI video & editing
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="flex items-start gap-6">
+                    <div
+                      class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary font-black text-sm shrink-0 ring-[4px] ring-[#0d223f] outline outline-1 outline-secondary shadow-[0_0_10px_rgba(238,164,12,0.2)]"
+                    >
+                      4
+                    </div>
+                    <div class="pt-1.5">
+                      <div
+                        class="font-bold text-white text-[15px] leading-tight"
+                      >
+                        Performance Marketing
+                      </div>
+                      <div class="text-[#8ca3c7] text-xs mt-1.5 font-medium">
+                        Meta Ads & scaling
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="flex items-start gap-6 pt-1">
+                    <div
+                      class="w-8 h-8 rounded-full bg-[#2a3c5a] flex items-center justify-center text-white font-black text-[11px] shrink-0 ring-[4px] ring-[#0d223f] outline outline-1 outline-[#3e567a]"
+                    >
+                      +3
+                    </div>
+                    <div class="pt-1.5">
+                      <div
+                        class="font-bold text-white text-[15px] leading-tight"
+                      >
+                        Business Growth to Capstone
+                      </div>
+                      <div class="text-[#8ca3c7] text-xs mt-1.5 font-medium">
+                        Freelancing, agency & live client projects
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 1.5. About Us -->
+    <section class="py-16 px-6 overflow-hidden bg-white">
+      <div
+        class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center"
+        data-aos="fade-up"
+      >
+        <!-- Image Side -->
+        <div class="relative">
+          <!-- Decorative dot pattern / background shape -->
+          <div
+            class="absolute -top-6 -left-6 w-32 h-32 bg-[radial-gradient(#EEA40C_2px,transparent_2px)] [background-size:16px_16px] opacity-40 z-0"
+          ></div>
+          <div
+            class="absolute -bottom-6 -right-6 w-32 h-32 bg-[radial-gradient(#052B71_2px,transparent_2px)] [background-size:16px_16px] opacity-20 z-0"
+          ></div>
+
+          <div
+            class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Students learning"
+              class="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"
+            ></div>
+          </div>
+
+          <!-- Floating Glassmorphism Badge -->
+          <div
+            class="absolute -bottom-8 right-8 lg:-right-8 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-[0_20px_50px_rgba(5,43,113,0.15)] z-20 border border-white/50 flex items-center gap-5 animate-fade-in-up group-hover:-translate-y-2 transition-transform duration-500"
+            style="animation-delay: 0.5s"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-secondary to-orange-500 shadow-inner rounded-2xl flex items-center justify-center text-white text-3xl transform -rotate-6 group-hover:rotate-0 transition-transform duration-500"
+            >
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div>
+              <div
+                class="text-4xl font-black text-primary leading-none tracking-tight mb-1"
+              >
+                #1
+              </div>
+              <div
+                class="text-primary/70 text-xs font-bold uppercase tracking-widest"
+              >
+                Digital Academy<br />in Odisha
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Side -->
+        <div class="lg:pl-8 mt-8 lg:mt-0">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-10 h-0.5 bg-secondary rounded-full"></span>
+            <span
+              class="text-secondary font-bold tracking-widest uppercase text-sm"
+              >About JaySan Academy</span
+            >
+          </div>
+
+          <h2
+            class="text-3xl md:text-4xl font-black text-primary mb-4 leading-[1.2] tracking-tight"
+          >
+            Bridging the digital divide with
+            <span class="relative whitespace-nowrap z-10 inline-block mt-1"
+              >Practical Skills</span
+            >
+          </h2>
+
+          <p class="text-gray-600 font-medium mb-8 text-base leading-relaxed">
+            We believe language should never be a barrier to learning modern
+            technology. We equip working professionals, business owners, and
+            homemakers with highly-demanded digital skills—taught step-by-step
+            in native Odia.
+          </p>
+
+          <!-- Key Features Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-8">
+            <div
+              class="flex items-center gap-3 p-2 -ml-2 rounded-xl hover:bg-secondary/5 transition-colors cursor-default"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-orange-400 flex items-center justify-center text-white text-sm shrink-0 shadow-md"
+              >
+                <i class="fas fa-check"></i>
+              </div>
+              <span class="text-primary font-bold text-base"
+                >100% Odia Language</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 p-2 -ml-2 rounded-xl hover:bg-secondary/5 transition-colors cursor-default"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-orange-400 flex items-center justify-center text-white text-sm shrink-0 shadow-md"
+              >
+                <i class="fas fa-check"></i>
+              </div>
+              <span class="text-primary font-bold text-base"
+                >Desk-Ready Projects</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 p-2 -ml-2 rounded-xl hover:bg-secondary/5 transition-colors cursor-default"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-orange-400 flex items-center justify-center text-white text-sm shrink-0 shadow-md"
+              >
+                <i class="fas fa-check"></i>
+              </div>
+              <span class="text-primary font-bold text-base"
+                >Live & Recorded Access</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 p-2 -ml-2 rounded-xl hover:bg-secondary/5 transition-colors cursor-default"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-orange-400 flex items-center justify-center text-white text-sm shrink-0 shadow-md"
+              >
+                <i class="fas fa-check"></i>
+              </div>
+              <span class="text-primary font-bold text-base"
+                >Premium Community</span
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 mt-4">
+            <button
+              class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg w-max group"
+            >
+              Discover Our Mission
+              <i
+                class="fas fa-arrow-right text-sm group-hover:translate-x-2 transition-transform"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Why Choose Us -->
+    <section class="bg-[#f8f9fc] py-20 px-6">
+      <div class="max-w-[1400px] mx-auto" data-aos="fade-up">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-black text-primary mb-4">
+            Why Choose <span class="text-secondary">JaySan Academy?</span>
+          </h2>
+          <p class="text-primary/70 font-medium max-w-2xl mx-auto">
+            We don't just teach theory. We equip you with practical, desk-ready
+            skills in Odia that you can apply immediately to grow your career or
+            business.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-white p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 border-b-4 border-secondary group cursor-default"
+          >
+            <div
+              class="w-14 h-14 bg-[#fceccf] rounded-2xl flex items-center justify-center text-secondary text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-language"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3">Learn in Odia</h3>
+            <p class="text-primary/70 text-sm">
+              Complex English terms explained simply in your native language for
+              better understanding.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-white p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 border-b-4 border-primary group cursor-default"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-video"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3">Live & Recorded</h3>
+            <p class="text-primary/70 text-sm">
+              Never miss a class. Attend live interactive sessions or watch
+              high-quality recordings anytime.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-white p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 border-b-4 border-secondary group cursor-default"
+          >
+            <div
+              class="w-14 h-14 bg-[#fceccf] rounded-2xl flex items-center justify-center text-secondary text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3">
+              Practical Approach
+            </h3>
+            <p class="text-primary/70 text-sm">
+              Hands-on projects and real-world scenarios so you are desk-ready
+              from day one.
+            </p>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-white p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 border-b-4 border-primary group cursor-default"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3">
+              Community Support
+            </h3>
+            <p class="text-primary/70 text-sm">
+              Join a thriving community of like-minded learners to network,
+              share, and grow together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5. Full Curriculum -->
+    <!-- 2.5. Full Curriculum -->
+    <section class="py-24 px-6 bg-[#FAFAF8] overflow-hidden">
+      <div class="max-w-[1400px] mx-auto" data-aos="fade-up">
+        <div class="text-center mb-20">
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <span class="w-8 h-0.5 bg-secondary"></span>
+            <span
+              class="text-secondary font-bold tracking-[0.2em] uppercase text-xs md:text-sm"
+              >Jaysan Digital Academy Curriculum</span
+            >
+            <span class="w-8 h-0.5 bg-secondary"></span>
+          </div>
+          <h2
+            class="text-3xl md:text-[44px] font-black text-primary mb-6 leading-tight"
+          >
+            One 57-day journey, seven real<br class="hidden md:block" />
+            stages
+          </h2>
+          <p
+            class="text-gray-500 font-medium text-sm md:text-base max-w-3xl mx-auto leading-relaxed px-4"
+          >
+            Every stage below is a live module block from our curriculum — not a
+            marketing metaphor. This is exactly how the course is sequenced,
+            start to graduation.
+          </p>
+        </div>
+
+        <!-- Timeline Container (Horizontal Scroll on Mobile) -->
+        <div
+          class="w-full overflow-x-auto pb-10 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        >
+          <div class="relative min-w-[1050px] h-[280px]">
+            <!-- Center Dashed Line -->
+            <div
+              class="absolute left-0 right-0 top-1/2 -translate-y-[1px] border-t-[2.5px] border-dashed border-[#b8c6d9] z-0"
+            ></div>
+
+            <div class="grid grid-cols-7 h-full relative z-10 gap-2 px-4">
+              <!-- Stage 1 (Top) -->
+              <div class="relative h-full">
+                <div
+                  class="absolute bottom-1/2 left-1/2 -translate-x-1/2 mb-6 w-[145px]"
+                >
+                  <div
+                    class="bg-[#FBF5ED] border border-[#E9D9C3] rounded-xl p-3 text-center shadow-sm"
+                  >
+                    <div class="text-primary font-bold text-[11px] mb-1">
+                      Stage 1 &middot; Days 1–5
+                    </div>
+                    <div class="text-gray-600 text-[11px] leading-relaxed">
+                      Digital Foundation<br />— mindset &<br />branding
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-secondary ring-[4px] ring-[#FAFAF8] outline outline-[2.5px] outline-primary z-20"
+                ></div>
+              </div>
+
+              <!-- Stage 2 (Bottom) -->
+              <div class="relative h-full">
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 mt-6 w-[145px]"
+                >
+                  <div
+                    class="bg-[#FBF5ED] border border-[#E9D9C3] rounded-xl p-3 text-center shadow-sm"
+                  >
+                    <div class="text-primary font-bold text-[11px] mb-1">
+                      Stage 2 &middot; Days 6–10
+                    </div>
+                    <div class="text-gray-600 text-[11px] leading-relaxed">
+                      AI Productivity —<br />ChatGPT, Gemini,<br />Claude
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-secondary ring-[4px] ring-[#FAFAF8] outline outline-[2.5px] outline-primary z-20"
+                ></div>
+              </div>
+
+              <!-- Stage 3 (Top) -->
+              <div class="relative h-full">
+                <div
+                  class="absolute bottom-1/2 left-1/2 -translate-x-1/2 mb-6 w-[145px]"
+                >
+                  <div
+                    class="bg-[#FBF5ED] border border-[#E9D9C3] rounded-xl p-3 text-center shadow-sm"
+                  >
+                    <div class="text-primary font-bold text-[11px] mb-1">
+                      Stage 3 &middot; Days 11–26
+                    </div>
+                    <div class="text-gray-600 text-[11px] leading-relaxed">
+                      Canva, AI Video,<br />Editing & Social<br />Media
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-secondary ring-[4px] ring-[#FAFAF8] outline outline-[2.5px] outline-primary z-20"
+                ></div>
+              </div>
+
+              <!-- Stage 4 (Bottom) -->
+              <div class="relative h-full">
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 mt-6 w-[145px]"
+                >
+                  <div
+                    class="bg-[#FBF5ED] border border-[#E9D9C3] rounded-xl p-3 text-center shadow-sm"
+                  >
+                    <div class="text-primary font-bold text-[11px] mb-1">
+                      Stage 4 &middot; Days 27–31
+                    </div>
+                    <div class="text-gray-600 text-[11px] leading-relaxed">
+                      Meta Ads &<br />Performance<br />Marketing
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-secondary ring-[4px] ring-[#FAFAF8] outline outline-[2.5px] outline-primary z-20"
+                ></div>
+              </div>
+
+              <!-- Stage 5 (Top) -->
+              <div class="relative h-full">
+                <div
+                  class="absolute bottom-1/2 left-1/2 -translate-x-1/2 mb-6 w-[145px]"
+                >
+                  <div
+                    class="bg-[#FBF5ED] border border-[#E9D9C3] rounded-xl p-3 text-center shadow-sm"
+                  >
+                    <div class="text-primary font-bold text-[11px] mb-1">
+                      Stage 5 &middot; Days 32–45
+                    </div>
+                    <div class="text-gray-600 text-[11px] leading-relaxed">
+                      Website,<br />Freelancing &<br />Agency Building
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-secondary ring-[4px] ring-[#FAFAF8] outline outline-[2.5px] outline-primary z-20"
+                ></div>
+              </div>
+
+              <!-- Stage 6 (Bottom) -->
+              <div class="relative h-full">
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 mt-6 w-[145px]"
+                >
+                  <div
+                    class="bg-[#FBF5ED] border border-[#E9D9C3] rounded-xl p-3 text-center shadow-sm"
+                  >
+                    <div class="text-primary font-bold text-[11px] mb-1">
+                      Stage 6 &middot; Days 36–37
+                    </div>
+                    <div class="text-gray-600 text-[11px] leading-relaxed">
+                      Lead Generation &<br />Funnels
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-secondary ring-[4px] ring-[#FAFAF8] outline outline-[2.5px] outline-primary z-20"
+                ></div>
+              </div>
+
+              <!-- Stage 7 (Top) -->
+              <div class="relative h-full">
+                <div
+                  class="absolute bottom-1/2 left-1/2 -translate-x-1/2 mb-6 w-[145px]"
+                >
+                  <div
+                    class="bg-[#FBF5ED] border border-[#E9D9C3] rounded-xl p-3 text-center shadow-sm"
+                  >
+                    <div class="text-primary font-bold text-[11px] mb-1">
+                      Stage 7 &middot; Days 46–57
+                    </div>
+                    <div class="text-gray-600 text-[11px] leading-relaxed">
+                      Live Client Projects<br />& Capstone
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-secondary ring-[4px] ring-[#FAFAF8] outline outline-[2.5px] outline-primary z-20"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Popular Courses -->
+    <section class="py-20 px-6">
+      <div class="max-w-[1400px] mx-auto" data-aos="fade-up">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6"
+        >
+          <div>
+            <h2 class="text-3xl md:text-5xl font-black text-primary mb-4">
+              Our Popular <span class="text-secondary">Courses</span>
+            </h2>
+            <p class="text-primary/70 font-medium">
+              Master the most in-demand digital skills today.
+            </p>
+          </div>
+          <button
+            class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+          >
+            View All Courses <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Course 1 -->
+          <div
+            class="bg-white rounded-3xl overflow-hidden group flex flex-col transition- cursor-pointer"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"
+              ></div>
+              <img
+                src="https://placehold.co/600x400/14294a/FFFFFF/png?text=Digital+Marketing"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Course Thumbnail"
+              />
+              <div class="absolute top-4 right-4 z-20 bg-red-600 text-white text-[11px] font-black px-3 py-1 rounded-md flex items-center gap-1.5 tracking-wider shadow-lg border border-red-500/30">
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                LIVE
+              </div>
+              <div
+                class="absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full"
+              >
+                Bestseller
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div
+                class="flex items-center gap-2 text-xs font-bold text-secondary mb-3"
+              >
+                <i class="fas fa-star"></i> 4.9 (2k+ Reviews)
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-2 line-clamp-2">
+                Complete Digital Marketing Mastery
+              </h3>
+              <p class="text-primary/70 text-sm mb-6 flex-grow">
+                Learn SEO, Social Media, Google Ads, and Meta Ads from scratch
+                to an advanced level.
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto"
+              >
+                <div>
+                  <span class="text-gray-400 line-through text-sm mr-2"
+                    >₹4,999</span
+                  >
+                  <span class="text-2xl font-black text-primary">₹7,999</span>
+                </div>
+                <button
+                  onclick="window.location.href = 'contact.html'"
+                  class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div
+            class="bg-white rounded-3xl overflow-hidden group flex flex-col transition- cursor-pointer"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"
+              ></div>
+              <img
+                src="https://placehold.co/600x400/f5a201/FFFFFF/png?text=AI+Tools+Mastery"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Course Thumbnail"
+              />
+              <div class="absolute top-4 right-4 z-20 bg-red-600 text-white text-[11px] font-black px-3 py-1 rounded-md flex items-center gap-1.5 tracking-wider shadow-lg border border-red-500/30">
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                LIVE
+              </div>
+              <div
+                class="absolute top-4 left-4 z-20 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full"
+              >
+                New
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div
+                class="flex items-center gap-2 text-xs font-bold text-secondary mb-3"
+              >
+                <i class="fas fa-star"></i> 4.8 (850 Reviews)
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-2 line-clamp-2">
+                AI Skill for Digital Marketing
+              </h3>
+              <p class="text-primary/70 text-sm mb-6 flex-grow">
+                Supercharge your productivity using ChatGPT, Midjourney, and top
+                AI tools for content creation.
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto"
+              >
+                <div>
+                  <span class="text-gray-400 line-through text-sm mr-2"
+                    >₹2,999</span
+                  >
+                  <span class="text-2xl font-black text-primary">₹1,999</span>
+                </div>
+                <button
+                  onclick="window.location.href = 'contact.html'"
+                  class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div
+            class="bg-white rounded-3xl overflow-hidden group flex flex-col transition- cursor-pointer"
+          >
+            <div class="h-48 bg-gray-200 relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"
+              ></div>
+              <img
+                src="https://placehold.co/600x400/0d223f/FFFFFF/png?text=Canva+Design"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Course Thumbnail"
+              />
+              <div class="absolute top-4 right-4 z-20 bg-red-600 text-white text-[11px] font-black px-3 py-1 rounded-md flex items-center gap-1.5 tracking-wider shadow-lg border border-red-500/30">
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                LIVE
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div
+                class="flex items-center gap-2 text-xs font-bold text-secondary mb-3"
+              >
+                <i class="fas fa-star"></i> 4.9 (1.2k Reviews)
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-2 line-clamp-2">
+                CANVA Design Pro
+              </h3>
+              <p class="text-primary/70 text-sm mb-6 flex-grow">
+                Design stunning graphics, social media posts, and presentations
+                without prior design experience.
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto"
+              >
+                <div>
+                  <span class="text-gray-400 line-through text-sm mr-2"
+                    >₹1,999</span
+                  >
+                  <span class="text-2xl font-black text-primary">₹1,999</span>
+                </div>
+                <button
+                  class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. How It Works -->
+    <section class="bg-primary text-white py-20 px-6 overflow-hidden relative">
+      <div
+        class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl"
+      ></div>
+
+      <div class="max-w-[1400px] mx-auto relative z-10" data-aos="fade-up">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-black mb-4">
+            How It <span class="text-secondary">Works</span>
+          </h2>
+          <p class="text-accent/80 font-medium max-w-2xl mx-auto">
+            Your journey to mastering digital skills is simple and
+            straightforward.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+          <!-- Connecting Line -->
+          <div
+            class="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-1 bg-white/10 -z-10"
+          ></div>
+
+          <div class="text-center group">
+            <div
+              class="w-24 h-24 mx-auto bg-[#0d223f] rounded-full border-4 border-secondary flex items-center justify-center text-3xl font-black text-secondary mb-6 )] group-hover:scale-110 )] transition-all duration-300"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-bold mb-2">Enroll</h3>
+            <p class="text-accent/70 text-sm px-4">
+              Sign up for your desired course and get instant .
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="w-24 h-24 mx-auto bg-[#0d223f] rounded-full border-4 border-secondary flex items-center justify-center text-3xl font-black text-secondary mb-6 )] group-hover:scale-110 )] transition-all duration-300"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-bold mb-2">Learn</h3>
+            <p class="text-accent/70 text-sm px-4">
+              Attend live classes or watch recorded sessions in Odia at your own
+              pace.
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="w-24 h-24 mx-auto bg-[#0d223f] rounded-full border-4 border-secondary flex items-center justify-center text-3xl font-black text-secondary mb-6 )] group-hover:scale-110 )] transition-all duration-300"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-bold mb-2">Practice</h3>
+            <p class="text-accent/70 text-sm px-4">
+              Apply what you learn through hands-on assignments and practical
+              projects.
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="w-24 h-24 mx-auto bg-[#0d223f] rounded-full border-4 border-secondary flex items-center justify-center text-3xl font-black text-secondary mb-6 )] group-hover:scale-110 )] transition-all duration-300"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-bold mb-2">Grow</h3>
+            <p class="text-accent/70 text-sm px-4">
+              Get certified and start applying your new skills to boost your
+              career or business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Testimonials -->
+    <section class="py-20 px-6 bg-[#f8f9fc]">
+      <div class="max-w-[1400px] mx-auto" data-aos="fade-up">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-black text-primary mb-4">
+            Student <span class="text-secondary">Success Stories</span>
+          </h2>
+          <p class="text-primary/70 font-medium max-w-2xl mx-auto">
+            Hear from our students who have transformed their careers with
+            JaySan Academy.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white p-8 rounded-3xl relative hover:-translate-y-2 transition-transform duration-300"
+          >
+            <i
+              class="fas fa-quote-left text-5xl text-gray-100 absolute top-6 right-6"
+            ></i>
+            <div class="flex text-secondary text-sm mb-4 relative z-10">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="text-primary/80 italic mb-8 relative z-10">
+              "Learning Digital Marketing in Odia made everything so much easier
+              to grasp. The concepts were explained perfectly with real-world
+              examples. Highly recommended!"
+            </p>
+            <div class="flex items-center gap-4 border-t border-gray-100 pt-6">
+              <div
+                class="w-14 h-14 bg-gray-300 rounded-full overflow-hidden border-2 border-secondary/30"
+              >
+                <img
+                  src="https://placehold.co/100x100/14294a/FFF?text=SM"
+                  alt="Student"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div class="font-bold text-primary">Sushant Mahapatra</div>
+                <div
+                  class="text-xs text-secondary font-bold uppercase tracking-wider"
+                >
+                  Business Owner
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white p-8 rounded-3xl relative hover:-translate-y-2 transition-transform duration-300"
+          >
+            <i
+              class="fas fa-quote-left text-5xl text-gray-100 absolute top-6 right-6"
+            ></i>
+            <div class="flex text-secondary text-sm mb-4 relative z-10">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="text-primary/80 italic mb-8 relative z-10">
+              "The AI Skill course is a game-changer! I can now generate content
+              and images in minutes instead of hours. The live support and
+              community is phenomenal."
+            </p>
+            <div class="flex items-center gap-4 border-t border-gray-100 pt-6">
+              <div
+                class="w-14 h-14 bg-gray-300 rounded-full overflow-hidden border-2 border-secondary/30"
+              >
+                <img
+                  src="https://placehold.co/100x100/f5a201/FFF?text=PD"
+                  alt="Student"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div class="font-bold text-primary">Priyanka Dash</div>
+                <div
+                  class="text-xs text-secondary font-bold uppercase tracking-wider"
+                >
+                  Marketing Exec
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white p-8 rounded-3xl relative hover:-translate-y-2 transition-transform duration-300"
+          >
+            <i
+              class="fas fa-quote-left text-5xl text-gray-100 absolute top-6 right-6"
+            ></i>
+            <div class="flex text-secondary text-sm mb-4 relative z-10">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text-primary/80 italic mb-8 relative z-10">
+              "I always thought Canva was just for basic stuff until I took this
+              course. The instructor's step-by-step guidance in our native
+              language built my confidence immensely."
+            </p>
+            <div class="flex items-center gap-4 border-t border-gray-100 pt-6">
+              <div
+                class="w-14 h-14 bg-gray-300 rounded-full overflow-hidden border-2 border-secondary/30"
+              >
+                <img
+                  src="https://placehold.co/100x100/0d223f/FFF?text=BM"
+                  alt="Student"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div class="font-bold text-primary">Bikash Mishra</div>
+                <div
+                  class="text-xs text-secondary font-bold uppercase tracking-wider"
+                >
+                  College Student
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA Banner -->
+    <section class="py-24 px-6 relative overflow-hidden bg-primary">
+      <!-- Abstract Shapes -->
+      <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"
+      ></div>
+
+      <div
+        class="max-w-[1000px] mx-auto text-center relative z-10 bg-white/5 backdrop-blur-xl px-5 py-10 md:p-16 rounded-[40px] border border-white/10"
+        data-aos="fade-up"
+      >
+        <h2
+          class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight"
+        >
+          Ready to Upgrade Your
+          <span
+            class="text-secondary border-b-4 border-secondary inline-block pb-1"
+            >Skills?</span
+          >
+        </h2>
+        <p
+          class="text-accent/90 font-medium mb-10 text-lg max-w-2xl mx-auto px-2 md:px-0"
+        >
+          Join thousands of successful students and start learning the skills
+          that pay you back every day.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button
+            class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+          >
+            <i class="fas fa-play-circle"></i> Join FREE Webinar
+          </button>
+          <button
+            class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+          >
+            <i class="fas fa-th-large"></i> Browse All Courses
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Expanded Footer -->
+    <footer
+      class="bg-[#0a1526] text-accent pt-20 pb-8 px-6 border-t border-white/5 relative z-20"
+    >
+      <div class="max-w-[1400px] mx-auto" data-aos="fade-up">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Brand Col -->
+          <div>
+            <img
+              src="logo.png"
+              alt="JaySan Digital Skill Academy"
+              class="h-14 object-contain mb-6 bg-white p-2 rounded-lg"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="text-2xl font-black text-white mb-2">
+              <span class="font-sans font-semibold tracking-[-0.02em]"
+                >JaySan</span
+              >
+              <span
+                class="font-sans font-bold tracking-[-0.02em] text-secondary"
+                >Digital</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-2 mb-4 font-display text-[10px] uppercase tracking-[-0.02em] text-white/80"
+            >
+              <span class="w-6 h-[1px] bg-secondary"></span>
+              BRAND. MARKET. SCALE.
+              <span class="w-6 h-[1px] bg-secondary"></span>
+            </div>
+            <p class="text-accent/70 text-sm mb-8 leading-relaxed pr-4">
+              Empowering Odisha with practical, desk-ready digital skills in our
+              native language. Build your career with us today.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="contact.html"
+                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors text-lg"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="contact.html"
+                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors text-lg"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="contact.html"
+                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors text-lg"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="contact.html"
+                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors text-lg"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Links Col 1 -->
+          <div>
+            <h4
+              class="text-white font-bold text-xl mb-6 flex items-center gap-2"
+            >
+              <i class="fas fa-link text-secondary text-sm"></i> Quick Links
+            </h4>
+            <ul class="space-y-4 text-accent/80 font-medium text-[15px]">
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >All Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  href="community.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Community</a
+                >
+              </li>
+              <li>
+                <a
+                  href="community.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Success Stories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links Col 2 -->
+          <div>
+            <h4
+              class="text-white font-bold text-xl mb-6 flex items-center gap-2"
+            >
+              <i class="fas fa-fire text-secondary text-sm"></i> Popular Courses
+            </h4>
+            <ul class="space-y-4 text-accent/80 font-medium text-[15px]">
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >AI Tools Mastery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Canva Design Pro</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Meta Ads Complete</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Video Editing Basic</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Col -->
+          <div>
+            <h4
+              class="text-white font-bold text-xl mb-6 flex items-center gap-2"
+            >
+              <i class="fas fa-envelope-open-text text-secondary text-sm"></i>
+              Contact Info
+            </h4>
+            <ul class="space-y-5 text-accent/80 font-medium text-sm">
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span class="mt-1">Bhubaneswar, Odisha, India</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <a
+                  href="mailto:info@jaysanacademy.com"
+                  class="hover:text-secondary transition-colors mt-1 break-all"
+                  >info@jaysanacademy.com</a
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <a
+                  href="tel:+919178405636"
+                  class="hover:text-secondary transition-colors mt-1"
+                  >+91 9178405636</a
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <i class="fas fa-id-card"></i>
+                </div>
+                <span class="mt-1">GSTN - 21CAADPP6504R1ZF</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-accent/60 text-sm font-medium"
+        >
+          <div class="text-center md:text-left">
+            &copy; 2024 JaySan Digital Skill Academy. All Rights Reserved.
+          </div>
+          <div class="flex gap-4 md:gap-8 flex-wrap justify-center">
+            <a href="contact.html" class="hover:text-white hover:underline transition-all"
+              >Privacy Policy</a
+            >
+            <a href="contact.html" class="hover:text-white hover:underline transition-all"
+              >Terms of Service</a
+            >
+            <a href="contact.html" class="hover:text-white hover:underline transition-all"
+              >Refund Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Enrollment Modal -->
+    <div
+      id="enrollModal"
+      class="fixed inset-0 bg-primary/80 backdrop-blur-sm z-[100] hidden items-center justify-center opacity-0 transition-opacity duration-300"
+    >
+      <div
+        class="bg-white rounded-3xl w-full max-w-md p-8 relative transform scale-95 transition-transform duration-300"
+        id="enrollModalContent"
+      >
+        <button
+          onclick="closeEnrollModal()"
+          class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <h3 class="text-2xl font-black text-primary mb-2">Enroll Now</h3>
+        <p class="text-primary/70 text-sm mb-6">
+          Leave your details and our team will get back to you shortly.
+        </p>
+
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-bold text-primary mb-1"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-primary mb-1"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              placeholder="+91"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-primary mb-1"
+              >Select Course</label
+            >
+            <select
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all text-sm text-primary/70"
+            >
+              <option>Complete Digital Marketing Mastery</option>
+              <option>AI Skill for Digital Marketing</option>
+              <option>CANVA Design Pro</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            onclick="closeEnrollModal()"
+            class="bg-transparent text-secondary hover:bg-secondary hover:text-primary font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg border-2 border-secondary"
+          >
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("enrollModal");
+      const modalContent = document.getElementById("enrollModalContent");
+
+      function openEnrollModal() {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        // Small delay to allow the browser to register the display change before animating opacity
+        setTimeout(() => {
+          modal.classList.remove("opacity-0");
+          modalContent.classList.remove("scale-95");
+        }, 10);
+      }
+
+      function closeEnrollModal() {
+        modal.classList.add("opacity-0");
+        modalContent.classList.add("scale-95");
+        // Wait for transition to finish before hiding completely
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        }, 300);
+      }
+      // Mobile Menu Logic
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const closeMobileMenuBtn = document.getElementById("closeMobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (mobileMenuBtn && closeMobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+          setTimeout(() => {
+            mobileMenu.classList.remove("opacity-0");
+          }, 10);
+        });
+
+        closeMobileMenuBtn.addEventListener("click", closeMobileMenu);
+      }
+
+      function closeMobileMenu() {
+        if (mobileMenu) {
+          mobileMenu.classList.add("opacity-0");
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("flex");
+          }, 300);
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+      <a
+        href="tel:+919178405636"
+        class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-[24px] hover:scale-110 transition-transform duration-300 )] animate-pulse-glow"
+        aria-label="Call Us"
+      >
+        <i class="fas fa-phone-alt"></i>
+      </a>
+      <a
+        href="https://wa.me/919178405636"
+        target="_blank"
+        class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-[32px] hover:scale-110 transition-transform duration-300 )]"
+        aria-label="Chat on WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </body>
+</html>
+

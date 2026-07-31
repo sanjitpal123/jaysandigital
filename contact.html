@@ -1,0 +1,755 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - JaySan Digital Skill Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#052B71",
+              secondary: "#EEA40C",
+              accent: "#e6eaf0",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              display: ["League Spartan", "sans-serif"],
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              fadeInLeft: {
+                "0%": { opacity: "0", transform: "translateX(-30px)" },
+                "100%": { opacity: "1", transform: "translateX(0)" },
+              },
+              fadeInRight: {
+                "0%": { opacity: "0", transform: "translateX(30px)" },
+                "100%": { opacity: "1", transform: "translateX(0)" },
+              },
+              zoomIn: {
+                "0%": { opacity: "0", transform: "scale(0.95)" },
+                "100%": { opacity: "1", transform: "scale(1)" },
+              },
+              pulseGlow: {
+                "0%, 100%": { boxShadow: "none" },
+                "50%": { boxShadow: "none" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+            animation: {
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+              "fade-in-left": "fadeInLeft 0.8s ease-out forwards",
+              "fade-in-right": "fadeInRight 0.8s ease-out forwards",
+              "zoom-in": "zoomIn 1s ease-out forwards",
+              "pulse-glow": "pulseGlow 2s infinite",
+              float: "float 4s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+      h1, h2, h3, h4, h5, h6, .font-display {
+        font-family: 'League Spartan', sans-serif;
+      }
+
+      p {
+        font-size: 1.125rem !important;
+      }
+
+      .underline-custom {
+        text-decoration: underline;
+        text-decoration-color: #EEA40C;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 8px;
+      }
+
+      .text-gradient-animate {
+        background: linear-gradient(270deg, #EEA40C, #f5d101, #EEA40C);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textGradient 3s ease infinite;
+      }
+
+      @keyframes textGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .typing-effect {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(41, end);
+        width: 34ch;
+      }
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 34ch }
+      }
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: currentColor; }
+      }
+
+      @keyframes live-pulse {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+        70% { transform: scale(1.05); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+      }
+
+      .animate-live-pulse {
+        animation: live-pulse 2s infinite;
+      }
+
+      .hero-border {
+        border-radius: 40px;
+      }
+
+      .module-box {
+        background-color: #052B71;
+        border-radius: 30px;
+      }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white min-h-screen flex flex-col font-sans text-gray-800 overflow-x-hidden w-full">
+    <!-- Top Bar -->
+    <div
+      class="bg-primary text-white text-xs md:text-sm py-2 px-6 hidden md:flex flex-col md:flex-row justify-between items-center"
+    >
+      <div class="font-medium">
+        Live in Odia · 200+ Students Trained
+      </div>
+      <div
+        class="flex flex-col md:flex-row gap-4 md:gap-8 items-center mt-2 md:mt-0 font-medium"
+      >
+        <span>GSTN - 21CAADPP6504R1ZF</span>
+        <div class="flex items-center gap-2">
+          <span class="bg-secondary text-primary rounded px-1.5 py-0.5"
+            ><i class="fas fa-phone-alt text-[10px]"></i
+          ></span>
+          <span>+91-9178405636</span>
+        </div>
+        <div class="flex gap-2">
+          <a
+            href="contact.html"
+            class="bg-gray-400 hover:bg-gray-300 text-primary w-6 h-6 rounded flex items-center justify-center"
+            ><i class="fab fa-linkedin-in text-[12px]"></i
+          ></a>
+          <a
+            href="contact.html"
+            class="bg-gray-400 hover:bg-gray-300 text-primary w-6 h-6 rounded flex items-center justify-center"
+            ><i class="fa-brands fa-x-twitter text-[12px]"></i
+          ></a>
+          <a
+            href="contact.html"
+            class="bg-blue-600 hover:bg-blue-500 text-white w-6 h-6 rounded flex items-center justify-center"
+            ><i class="fab fa-facebook-f text-[12px]"></i
+          ></a>
+          <a
+            href="contact.html"
+            class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white w-6 h-6 rounded flex items-center justify-center"
+            ><i class="fab fa-instagram text-[12px]"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+      class="bg-[#f5f5f5] py-3 px-6 md:px-6 flex justify-between items-center sticky top-0 z-50"
+    >
+      <div class="flex items-center">
+        <img
+          src="logo.png"
+          alt="JaySan Digital Skill Academy"
+          class="h-12 md:h-16 object-contain"
+        />
+      </div>
+      <div class="hidden lg:flex gap-10 text-primary font-bold text-lg">
+        <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
+        <a href="about.html" class="hover:text-secondary transition-colors">About us</a>
+        <a href="courses.html" class="hover:text-secondary transition-colors">Courses</a>
+        <a href="community.html" class="hover:text-secondary transition-colors">Community</a>
+        <a href="blog.html" class="hover:text-secondary transition-colors">Blog</a>
+        <a href="contact.html" class="text-secondary">Contact us</a>
+      </div>
+      <div class="hidden lg:block">
+        <button
+          onclick="window.location.href='contact.html'"
+          class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+        >
+          <i class="fas fa-users"></i> Join FREE Webinar
+        </button>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobileMenuBtn"
+        class="lg:hidden text-primary text-2xl focus:outline-none"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-primary/95 backdrop-blur-md z-[100] hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300"
+    >
+      <button
+        id="closeMobileMenuBtn"
+        class="absolute top-6 right-3 text-white text-3xl focus:outline-none"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <div
+        class="flex flex-col items-center gap-6 text-white font-bold text-xl"
+      >
+        <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
+        <a href="about.html" class="hover:text-secondary transition-colors">About us</a>
+        <a href="courses.html" class="hover:text-secondary transition-colors">Courses</a>
+        <a href="community.html" class="hover:text-secondary transition-colors">Community</a>
+        <a href="blog.html" class="hover:text-secondary transition-colors">Blog</a>
+        <a href="contact.html" class="text-secondary">Contact us</a>
+        <button
+          onclick="
+            closeMobileMenu();
+            openEnrollModal();
+          "
+          class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+        >
+          <i class="fas fa-users"></i> Join FREE Webinar
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Hero Section -->
+        <!-- Main Content -->
+    <main class="flex-grow w-full bg-[#f8f9fc] relative overflow-hidden pb-20">
+      
+      <!-- Contact Hero -->
+      <div
+        class="w-[calc(100%-2rem)] max-w-[1400px] mx-auto my-4 lg:my-8 relative flex flex-col items-center justify-center min-h-[350px] rounded-[40px] overflow-hidden bg-[#052B71] text-center p-10 md:p-16 text-white shadow-xl"
+        data-aos="fade-up"
+      >
+        <div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 80% 20%, #EEA40C 0%, transparent 60%);"></div>
+        <div class="absolute bottom-0 left-0 w-full h-full opacity-30 pointer-events-none" style="background-image: radial-gradient(circle at 10% 90%, #1f2937 0%, transparent 50%);"></div>
+        <div class="relative z-10">
+          <div class="text-sm font-bold text-secondary mb-6 tracking-widest uppercase bg-white/10 inline-block px-4 py-2 rounded-[8px] backdrop-blur-md">
+            <a href="index.html" class="hover:text-white text-secondary transition-colors">Home</a> <span class="mx-2">/</span> <span class="text-white">Contact Us</span>
+          </div>
+          <h1 class="text-5xl md:text-6xl lg:text-[72px] font-black text-white leading-[1.1] mb-6 tracking-tight">
+            Get In Touch
+          </h1>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 max-w-3xl mx-auto opacity-90">
+            Let's start a conversation
+          </h2>
+          <p class="text-white/70 font-medium text-lg leading-relaxed max-w-3xl mx-auto">
+            Have questions about our courses, schedule, or enrollment process? Our team is here to help you take the next step in your digital career.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Info Cards -->
+      <div class="max-w-[1400px] mx-4 xl:mx-auto mt-20 mb-16" data-aos="fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Location -->
+          <div class="bg-white rounded-[30px] p-10 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-[#052B71] opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none"></div>
+            <div class="w-20 h-20 rounded-[8px] bg-[#052B71]/10 flex items-center justify-center text-[#052B71] text-3xl mb-6 group-hover:scale-110 group-hover:bg-[#052B71] group-hover:text-white transition-all duration-300">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="text-2xl font-black text-[#1f2937] mb-4">Our Location</h3>
+            <p class="text-[#1f2937]/80 font-bold text-lg mb-2">JaySan Academy HQ</p>
+            <p class="text-[#1f2937]/60 font-medium mb-8">Bhubaneswar, Odisha, India</p>
+            <a href="https://maps.google.com/?q=Bhubaneswar,+Odisha,+India" target="_blank" class="text-[#052B71] font-bold hover:text-secondary flex items-center gap-2 transition-colors mt-auto">
+              View on Map <i class="fas fa-external-link-alt text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Phone -->
+          <div class="bg-[#052B71] rounded-[30px] p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.2)] transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none"></div>
+            <div class="w-20 h-20 rounded-[8px] bg-white/10 flex items-center justify-center text-secondary text-3xl mb-6 group-hover:scale-110 group-hover:bg-secondary group-hover:text-[#052B71] transition-all duration-300">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-4">Call Us Directly</h3>
+            <p class="text-white/60 font-medium mb-8">Available Mon-Sat, 10:00 AM - 6:00 PM</p>
+            <a href="tel:+919178405636" class="text-3xl font-black text-secondary hover:text-white transition-colors mt-auto">
+              +91 9178405636
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div class="bg-white rounded-[30px] p-10 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-[#052B71] opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none"></div>
+            <div class="w-20 h-20 rounded-[8px] bg-[#052B71]/10 flex items-center justify-center text-[#052B71] text-3xl mb-6 group-hover:scale-110 group-hover:bg-[#052B71] group-hover:text-white transition-all duration-300">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="text-2xl font-black text-[#1f2937] mb-4">Send an Email</h3>
+            <p class="text-[#1f2937]/60 font-medium mb-8">Drop us a line anytime. We reply within 24 hours.</p>
+            <a href="mailto:info@jaysanacademy.com" class="text-xl font-bold text-[#052B71] hover:text-secondary transition-colors mt-auto">
+              info@jaysanacademy.com
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contact Form & Map Section -->
+      <div class="max-w-[1400px] mx-4 xl:mx-auto mb-20 flex flex-col lg:flex-row gap-12" data-aos="fade-up">
+        
+        <!-- Form -->
+        <div class="lg:w-1/2 bg-white rounded-[40px] p-10 md:p-14 shadow-[0_10px_40px_rgb(0,0,0,0.05)] border border-gray-100 relative">
+          <div class="absolute -top-6 -right-6 w-24 h-24 bg-secondary rounded-[8px] filter blur-[40px] opacity-20 pointer-events-none"></div>
+          <h2 class="text-4xl md:text-5xl font-black text-[#1f2937] mb-4">Send a Message</h2>
+          <p class="text-[#1f2937]/70 font-medium text-lg mb-10">Fill out the form below and we will get back to you as soon as possible.</p>
+          
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-[#1f2937]">First Name <span class="text-red-500">*</span></label>
+                <input type="text" class="w-full bg-[#f8f9fc] border-2 border-gray-100 rounded-[8px] px-5 py-4 focus:outline-none focus:border-[#052B71] transition-colors font-medium" required>
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-[#1f2937]">Last Name <span class="text-red-500">*</span></label>
+                <input type="text" class="w-full bg-[#f8f9fc] border-2 border-gray-100 rounded-[8px] px-5 py-4 focus:outline-none focus:border-[#052B71] transition-colors font-medium" required>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-[#1f2937]">Email Address <span class="text-red-500">*</span></label>
+                <input type="email" class="w-full bg-[#f8f9fc] border-2 border-gray-100 rounded-[8px] px-5 py-4 focus:outline-none focus:border-[#052B71] transition-colors font-medium" required>
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-[#1f2937]">Phone Number <span class="text-red-500">*</span></label>
+                <input type="tel" class="w-full bg-[#f8f9fc] border-2 border-gray-100 rounded-[8px] px-5 py-4 focus:outline-none focus:border-[#052B71] transition-colors font-medium" required>
+              </div>
+            </div>
+            
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-[#1f2937]">Subject</label>
+              <select class="w-full bg-[#f8f9fc] border-2 border-gray-100 rounded-[8px] px-5 py-4 focus:outline-none focus:border-[#052B71] transition-colors font-medium appearance-none">
+                <option>Course Inquiry</option>
+                <option>Demo Class Booking</option>
+                <option>General Support</option>
+                <option>Partnership/Corporate</option>
+              </select>
+            </div>
+            
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-[#1f2937]">Your Message <span class="text-red-500">*</span></label>
+              <textarea rows="5" class="w-full bg-[#f8f9fc] border-2 border-gray-100 rounded-[8px] px-5 py-4 focus:outline-none focus:border-[#052B71] transition-colors font-medium resize-none" required></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-secondary text-primary font-bold py-3 px-6 rounded-[8px] hover:opacity-90 transition-all text-lg flex items-center justify-center gap-2">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+            <p class="text-xs text-center text-gray-500 font-medium">By submitting, you agree to be contacted by our team about your enquiry.</p>
+          </form>
+        </div>
+
+        <!-- Map -->
+        <div id="map-section" class="lg:w-1/2 flex flex-col">
+          <div class="bg-[#052B71] rounded-t-[40px] p-10 md:px-14 text-white">
+            <h2 class="text-4xl font-black mb-2">Find Us</h2>
+            <p class="text-white/70 font-medium text-lg">Come visit our academy in person.</p>
+          </div>
+          <div class="flex-grow bg-gray-200 rounded-b-[40px] overflow-hidden min-h-[400px] relative border-4 border-[#052B71]">
+             <!-- Google Map Embed -->
+             <iframe src="https://maps.google.com/maps?q=Bhubaneswar,%20Odisha,%20India&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 w-full h-full"></iframe>
+             <!-- In production, replace the div above with an iframe embed from Google Maps -->
+          </div>
+        </div>
+        
+      </div>
+
+    </main>
+    <!-- 7. Expanded Footer -->
+    <footer
+      class="bg-[#0a1526] text-accent pt-20 pb-8 px-6 border-t border-white/5 relative z-20"
+    >
+      <div class="max-w-[1400px] mx-auto" data-aos="fade-up">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Brand Col -->
+          <div>
+            <img
+              src="logo.png"
+              alt="JaySan Digital Skill Academy"
+              class="h-14 object-contain mb-6 bg-white p-2 rounded-lg"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="text-2xl font-black text-white mb-2">
+              <span class="font-sans font-semibold tracking-[-0.02em]">JaySan</span> <span class="font-sans font-bold tracking-[-0.02em] text-secondary">Digital</span>
+            </div>
+            <div class="flex items-center gap-2 mb-4 font-display text-[10px] uppercase tracking-[-0.02em] text-white/80">
+              <span class="w-6 h-[1px] bg-secondary"></span>
+              BRAND. MARKET. SCALE.
+              <span class="w-6 h-[1px] bg-secondary"></span>
+            </div>
+            <p class="text-accent/70 text-sm mb-8 leading-relaxed pr-4">
+              Empowering Odisha with practical, desk-ready digital skills in our
+              native language. Build your career with us today.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="contact.html"
+                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors text-lg"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="contact.html"
+                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors text-lg"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="contact.html"
+                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors text-lg"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="contact.html"
+                class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors text-lg"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Links Col 1 -->
+          <div>
+            <h4
+              class="text-white font-bold text-xl mb-6 flex items-center gap-2"
+            >
+              <i class="fas fa-link text-secondary text-sm"></i> Quick Links
+            </h4>
+            <ul class="space-y-4 text-accent/80 font-medium text-[15px]">
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >All Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  href="community.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Community</a
+                >
+              </li>
+              <li>
+                <a
+                  href="community.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Success Stories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links Col 2 -->
+          <div>
+            <h4
+              class="text-white font-bold text-xl mb-6 flex items-center gap-2"
+            >
+              <i class="fas fa-fire text-secondary text-sm"></i> Popular Courses
+            </h4>
+            <ul class="space-y-4 text-accent/80 font-medium text-[15px]">
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >AI Tools Mastery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Canva Design Pro</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Meta Ads Complete</a
+                >
+              </li>
+              <li>
+                <a
+                  href="courses.html"
+                  class="hover:text-secondary hover:translate-x-1 transition-all inline-block"
+                  >Video Editing Basic</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Col -->
+          <div>
+            <h4
+              class="text-white font-bold text-xl mb-6 flex items-center gap-2"
+            >
+              <i class="fas fa-envelope-open-text text-secondary text-sm"></i>
+              Contact Info
+            </h4>
+            <ul class="space-y-5 text-accent/80 font-medium text-sm">
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-[8px] bg-white/5 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span class="mt-1">Bhubaneswar, Odisha, India</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-[8px] bg-white/5 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <a
+                  href="mailto:info@jaysanacademy.com"
+                  class="hover:text-secondary transition-colors mt-1 break-all"
+                  >info@jaysanacademy.com</a
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-[8px] bg-white/5 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <a
+                  href="tel:+919178405636"
+                  class="hover:text-secondary transition-colors mt-1"
+                  >+91 9178405636</a
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 rounded-[8px] bg-white/5 flex items-center justify-center text-secondary shrink-0"
+                >
+                  <i class="fas fa-id-card"></i>
+                </div>
+                <span class="mt-1">GSTN - 21CAADPP6504R1ZF</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-accent/60 text-sm font-medium"
+        >
+          <div class="text-center md:text-left">
+            &copy; 2024 JaySan Digital Skill Academy. All Rights Reserved.
+          </div>
+          <div class="flex gap-4 md:gap-8 flex-wrap justify-center">
+            <a href="contact.html" class="hover:text-white hover:underline transition-all"
+              >Privacy Policy</a
+            >
+            <a href="contact.html" class="hover:text-white hover:underline transition-all"
+              >Terms of Service</a
+            >
+            <a href="contact.html" class="hover:text-white hover:underline transition-all"
+              >Refund Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Enrollment Modal -->
+    <div
+      id="enrollModal"
+      class="fixed inset-0 bg-primary/80 backdrop-blur-sm z-[100] hidden items-center justify-center opacity-0 transition-opacity duration-300"
+    >
+      <div
+        class="bg-white rounded-3xl w-full max-w-md p-8 relative transform scale-95 transition-transform duration-300"
+        id="enrollModalContent"
+      >
+        <button
+          onclick="closeEnrollModal()"
+          class="bg-secondary text-primary hover:opacity-90 font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <h3 class="text-2xl font-black text-primary mb-2">Enroll Now</h3>
+        <p class="text-primary/70 text-sm mb-6">
+          Leave your details and our team will get back to you shortly.
+        </p>
+
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-bold text-primary mb-1"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="w-full px-4 py-3 rounded-[8px] border border-gray-200 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-primary mb-1"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              placeholder="+91"
+              class="w-full px-4 py-3 rounded-[8px] border border-gray-200 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-primary mb-1"
+              >Select Course</label
+            >
+            <select
+              class="w-full px-4 py-3 rounded-[8px] border border-gray-200 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all text-sm text-primary/70"
+            >
+              <option>Complete Digital Marketing Mastery</option>
+              <option>AI Skill for Digital Marketing</option>
+              <option>CANVA Design Pro</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            onclick="closeEnrollModal()"
+            class="bg-transparent text-secondary hover:bg-secondary hover:text-primary font-bold py-3 px-6 rounded-[8px] flex items-center justify-center gap-2 transition-all text-lg border-2 border-secondary"
+          >
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("enrollModal");
+      const modalContent = document.getElementById("enrollModalContent");
+
+      function openEnrollModal() {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        // Small delay to allow the browser to register the display change before animating opacity
+        setTimeout(() => {
+          modal.classList.remove("opacity-0");
+          modalContent.classList.remove("scale-95");
+        }, 10);
+      }
+
+      function closeEnrollModal() {
+        modal.classList.add("opacity-0");
+        modalContent.classList.add("scale-95");
+        // Wait for transition to finish before hiding completely
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        }, 300);
+      }
+      // Mobile Menu Logic
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const closeMobileMenuBtn = document.getElementById("closeMobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (mobileMenuBtn && closeMobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+          setTimeout(() => {
+            mobileMenu.classList.remove("opacity-0");
+          }, 10);
+        });
+
+        closeMobileMenuBtn.addEventListener("click", closeMobileMenu);
+      }
+
+      function closeMobileMenu() {
+        if (mobileMenu) {
+          mobileMenu.classList.add("opacity-0");
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("flex");
+          }, 300);
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+      <a
+        href="tel:+919178405636"
+        class="bg-blue-600 text-white w-14 h-14 rounded-[8px] flex items-center justify-center text-[24px] hover:scale-110 transition-transform duration-300 )] animate-pulse-glow"
+        aria-label="Call Us"
+      >
+        <i class="fas fa-phone-alt"></i>
+      </a>
+      <a
+        href="https://wa.me/919178405636"
+        target="_blank"
+        class="bg-[#25D366] text-white w-14 h-14 rounded-[8px] flex items-center justify-center text-[32px] hover:scale-110 transition-transform duration-300 )]"
+        aria-label="Chat on WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </body>
+</html>
+
+
+
